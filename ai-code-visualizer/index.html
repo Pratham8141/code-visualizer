@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Code Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>🧠 AI Code Visualizer</header>
+
+<div class="app">
+  <div class="panel code-panel">
+    <h2>Code</h2>
+
+    <textarea id="codeInput">
+let x = 5;
+let y = x + 2;
+y = y * 3;
+    </textarea>
+
+    <button id="runBtn">▶ Run</button>
+
+    <pre id="codeView"></pre>
+  </div>
+
+  <div class="panel exec-panel">
+    <h2>Execution</h2>
+    <div id="currentLine">Line: -</div>
+
+    <h3>Variables</h3>
+    <table id="varsTable"></table>
+
+    <div class="controls">
+      <button id="prevBtn">⏮ Prev</button>
+      <input type="range" id="timeline" min="0" value="0" />
+      <button id="nextBtn">Next ⏭</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/esprima/dist/esprima.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
